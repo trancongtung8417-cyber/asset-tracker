@@ -1,0 +1,55 @@
+# ============================================================
+# ASSET TRACKER - CẤU HÌNH NGHIỆP VỤ
+# ============================================================
+
+app:
+  name: "Asset Tracker"
+  subtitle: "Quản lý tài sản & thiết bị văn phòng"
+  version: "1.0.0"
+  language: "vi"
+
+llm:
+  model: "gemma-3-27b-it"
+  temperature: 0.2
+  max_tokens: 2048
+
+warranty:
+  alert_days_before: 30          # Cảnh báo trước N ngày hết bảo hành
+  critical_days_before: 7        # Cảnh báo khẩn trước N ngày
+
+asset:
+  categories:
+    - "Laptop"
+    - "Máy tính bàn"
+    - "Màn hình"
+    - "Máy in"
+    - "Điện thoại"
+    - "Máy chiếu"
+    - "Thiết bị mạng"
+    - "Bàn ghế văn phòng"
+    - "Điều hòa"
+    - "Khác"
+  statuses:
+    - "Đang sử dụng"
+    - "Kho dự phòng"
+    - "Đang bảo hành"
+    - "Hỏng / Chờ xử lý"
+    - "Đã thanh lý"
+  departments:
+    - "Ban Giám đốc"
+    - "Phòng Kế toán"
+    - "Phòng Nhân sự"
+    - "Phòng IT"
+    - "Phòng Kinh doanh"
+    - "Phòng Marketing"
+    - "Phòng Hành chính"
+    - "Phòng Kỹ thuật"
+    - "Phòng Sản xuất"
+    - "Khác"
+
+logging:
+  app_log: "logs/app.log"
+  error_log: "logs/error.log"
+  level: "INFO"
+  max_bytes: 5242880    # 5 MB
+  backup_count: 3
