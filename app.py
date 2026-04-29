@@ -382,9 +382,13 @@ def render_tab_assignment():
                         new_dept = dept if action == "Bàn giao" else asset.get("department", "")
                         new_user = employee_name if action == "Bàn giao" else ""
                         db.update_asset(asset_id, {
+                            "name": name,
+                            "category": category,
+                            "serial_number": serial,
                             "status": new_status,
                             "department": new_dept,
                             "assigned_to": new_user,
+                            "notes": notes,
                         })
 
                         show_success(f"Đã tạo phiếu {action} — ID: {record['id']}")
