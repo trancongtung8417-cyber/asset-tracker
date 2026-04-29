@@ -117,7 +117,8 @@ def render_tab_asset_list():
                     show_warning("Không đọc được dữ liệu từ file. Kiểm tra lại định dạng cột.")
             except Exception as e:
                 logger.error(f"Import Excel error: {e}")
-                show_error()
+                st.error(str(e))
+                #show_error()
 
     with col_main:
         # Action buttons
